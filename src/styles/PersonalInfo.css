@@ -1,0 +1,53 @@
+.personalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 75%;
+  padding: 20px;
+  background-color: gray;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+}
+
+.personalForm label {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.personalForm input[type="text"],
+.personalForm input[type="email"] {
+  width: 75%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.personalForm input[type="text"]:focus,
+.personalForm input[type="email"]:focus {
+  border: 2px solid #ccc;
+}
+
+.btn {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005b79;
+}
+
+.personalForm p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
