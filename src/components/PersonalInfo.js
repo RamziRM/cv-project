@@ -37,6 +37,7 @@ class PersonalInfo extends Component {
                 }
             })
         );
+        console.log(this.state.personalInfo);
     }
 
     render() {
@@ -46,23 +47,64 @@ class PersonalInfo extends Component {
             <h2>Personal Information</h2>
             <form className="personalForm" onSubmit={this.handleSubmit}>
                 <label htmlFor="firstName">First name</label>
-                <input type="text" id="firstName" name="firstName" />
+                <input 
+                type="text" 
+                id="firstName" 
+                name="firstName"
+                placeholder="First name"
+                required
+                onChange={this.handleChange}
+                 />
                 <label htmlFor="lastName">Last name</label>
-                <input type="text" id="lastName" name="lastName" />
+                <input 
+                type="text" 
+                id="lastName" 
+                name="lastName"
+                placeholder="Last name"
+                required
+                onChange={this.handleChange}
+                 />
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" />
+                <input
+                 type="email"
+                 id="email" 
+                 name="email"
+                 required
+                 onChange={this.handleChange}
+                 />
                 <label htmlFor="phone">Phone</label>
+                <input 
+                type="text" 
+                id="phone" 
+                name="phone" 
+                onChange={this.handleChange}/>
                 <label htmlFor="location">Location</label>
-                <input type="text" id="location" name="location" />
+                <input 
+                type="text" 
+                id="location" 
+                name="location"
+                onChange={this.handleChange}
+                />
 
                 <label htmlFor="github">GitHub</label>
-                <input type="text" id="github" name="github" />
+                <input 
+                type="text" 
+                id="github" 
+                name="github"
+                onChange={this.handleChange}
+                />
                 <label htmlFor="website">Website</label>
-                <input type="text" id="website" name="website" />
+                <input 
+                type="text" 
+                id="website" 
+                name="website" 
+                onChange={this.handleChange}
+                />
                 <button 
                 type="submit"
                 className="btn"
-                >Save
+                >
+                    Save
                 </button>
             </form>
         </div>
