@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PersonalInfo from './components/PersonalInfo';
+import Experience from './components/Experience';
 
 class App extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class App extends Component {
       <div>
           <h1>CV Generator</h1>
           <PersonalInfo />
+          <Experience />
       </div>
     );
   }
