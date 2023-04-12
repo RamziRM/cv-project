@@ -16,6 +16,7 @@ class PersonalInfo extends Component {
             editMode: true,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     // handleSubmit should toggle editMode to !prevState.editMode
@@ -37,10 +38,33 @@ class PersonalInfo extends Component {
                 }
             })
         );
-        console.log(this.state.personalInfo);
     }
 
     render() {
+        
+        const { editMode, personalInfo } = this.state;
+        // if editMode is false, render the personal info
+        if (!editMode) {
+            return (
+                <div>
+                    <h2>Personal Information</h2>
+                    <p>First name: {personalInfo.firstName}</p>
+                    <p>Last name: {personalInfo.lastName}</p>
+                    <p>Email: {personalInfo.email}</p>
+                    <p>Phone: {personalInfo.phone}</p>
+                    <p>Location: {personalInfo.location}</p>
+                    <p>GitHub: {personalInfo.github}</p>
+                    <p>Website: {personalInfo.website}</p>
+                    <button 
+                    type="button"
+                    className="btn"
+                    onClick={this.handleSubmit}
+                    >
+                        Edit
+                    </button>
+                </div>
+            );
+        }
 
         return (
         <div>
@@ -70,7 +94,7 @@ class PersonalInfo extends Component {
                  id="email" 
                  name="email"
                  required
-                 onChange={this.handleChange}
+                 onChange={this.handleSubmit}
                  />
                 <label htmlFor="phone">Phone</label>
                 <input 
