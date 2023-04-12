@@ -30,8 +30,7 @@ class PersonalInfo extends Component {
     // handleChange should update the state with the new value
     handleChange = (e) => {
         const { name, value } = e.target;
-        this.setState(
-            (prevState) => ({
+        this.setState((prevState) => ({
                 personalInfo: {
                     ...prevState.personalInfo,
                     [name]: value
@@ -41,8 +40,9 @@ class PersonalInfo extends Component {
     }
 
     render() {
-        
         const { editMode, personalInfo } = this.state;
+        // order of destructuring matters ***
+        const { firstName, lastName, email, phone, location, github, website } = personalInfo;
         // if editMode is false, render the personal info
         if (!editMode) {
             return (
@@ -78,6 +78,7 @@ class PersonalInfo extends Component {
                 placeholder="First name"
                 required
                 onChange={this.handleChange}
+                value={firstName}
                  />
                 <label htmlFor="lastName">Last name</label>
                 <input 
@@ -87,6 +88,7 @@ class PersonalInfo extends Component {
                 placeholder="Last name"
                 required
                 onChange={this.handleChange}
+                value={lastName}
                  />
                 <label htmlFor="email">Email</label>
                 <input
@@ -94,20 +96,24 @@ class PersonalInfo extends Component {
                  id="email" 
                  name="email"
                  required
-                 onChange={this.handleSubmit}
+                 onChange={this.handleChange}
+                 value={email}
                  />
                 <label htmlFor="phone">Phone</label>
                 <input 
                 type="text" 
                 id="phone" 
                 name="phone" 
-                onChange={this.handleChange}/>
+                onChange={this.handleChange}
+                value={phone}
+                />
                 <label htmlFor="location">Location</label>
                 <input 
                 type="text" 
                 id="location" 
                 name="location"
                 onChange={this.handleChange}
+                value={location}
                 />
 
                 <label htmlFor="github">GitHub</label>
@@ -116,6 +122,7 @@ class PersonalInfo extends Component {
                 id="github" 
                 name="github"
                 onChange={this.handleChange}
+                value={github}
                 />
                 <label htmlFor="website">Website</label>
                 <input 
@@ -123,6 +130,7 @@ class PersonalInfo extends Component {
                 id="website" 
                 name="website" 
                 onChange={this.handleChange}
+                value={website}
                 />
                 <button 
                 type="submit"
