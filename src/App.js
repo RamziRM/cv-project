@@ -1,11 +1,21 @@
-import './App.css';
+import React, { Component } from 'react';
+import PersonalInfo from './components/PersonalInfo';
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      // name: 'React'
+    };
+  };
+  render() {
+    return (
+      <div>
+          <h1>CV Generator</h1>
+          <PersonalInfo />
+      </div>
+    );
+  }
 }
 
 export default App;
