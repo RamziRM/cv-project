@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/Experience.css";
 
 class Experience extends Component {
     constructor(props) {
