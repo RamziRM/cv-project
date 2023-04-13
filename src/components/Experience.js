@@ -63,7 +63,7 @@ class Experience extends Component {
         return (
             <div>
                 <h2>Experience</h2>
-                <form onSubmit={this.handleSubmit}>
+                <form className= "expForm" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Company Name</label>
                         <input

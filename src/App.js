@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PersonalInfo from './components/PersonalInfo';
 import Experience from './components/Experience';
 
+import "./styles/app.css";
+
+
 class App extends Component {
   constructor() {
     super();
@@ -11,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
+      <div className='app-cont'>
           <h1>CV Generator</h1>
           <PersonalInfo />
           <Experience />
