@@ -47,9 +47,9 @@ class PersonalInfo extends Component {
         // if editMode is false, render the personal info
         if (!editMode) {
             return (
-                <div>
+                <div className="read-cont">
                     <h2>Personal Information</h2>
-                    <p>First name: {personalInfo.firstName}</p>
+                    <p><strong>First name:</strong> {personalInfo.firstName}</p>
                     <p>Last name: {personalInfo.lastName}</p>
                     <p>Email: {personalInfo.email}</p>
                     <p>Phone: {personalInfo.phone}</p>

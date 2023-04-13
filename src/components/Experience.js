@@ -42,7 +42,7 @@ class Experience extends Component {
 
         if (!editMode) {
             return (
-                <div>
+                <div className="read-cont">
                     <h2>Experience</h2>
                     <p>Company Name: {experience.name}</p>
                     <p>Title: {experience.title}</p>
