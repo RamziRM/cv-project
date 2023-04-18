@@ -17,15 +17,15 @@ const PersonalInfo = () => {
     // handleSubmit should toggle editMode to !prevState.editMode
     const handleSubmit = (e) => {
         e.preventDefault();
-        setEditMode(editMode);
+        setEditMode(!editMode);
     }
 
     // handleChange should update the state with the new value
     const handleChange = (e) => {
         const { name, value } = e.target;
         setPersonalInfo((prevState) => ({
-                ...prevState.personalInfo,
-                [name]: value
+            ...prevState,
+            [name]: value
             }));
     }
     
