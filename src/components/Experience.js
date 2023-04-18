@@ -20,7 +20,7 @@ const Experience = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setExperience((prevState) => ({
-            ...prevState.experience,
+            ...prevState,
             [name]: value
         }));
     };
